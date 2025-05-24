@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  url: git@github.com:rodriguesalex/nginx-image-meta.git
+  url: ssh://git@github.com/rodriguesalex/nginx-image-data.git
   ref:
     branch: main
   secretRef:
