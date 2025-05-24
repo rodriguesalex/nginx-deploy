@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: nginx-image-meta
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: https://github.com/rodriguesalex/nginx-image-meta
+  ref:
+    branch: main
