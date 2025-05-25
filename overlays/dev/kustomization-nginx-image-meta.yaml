@@ -10,6 +10,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: nginx-image-meta
+    namespace: flux-system
   targetNamespace: flux-system
   dependsOn:
     - name: nginx-app
