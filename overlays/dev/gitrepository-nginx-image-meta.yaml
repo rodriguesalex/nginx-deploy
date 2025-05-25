@@ -10,3 +10,20 @@ spec:
     branch: main
   secretRef:
     name: nginx-image-meta-ssh
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: nginx-deploy-repo
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: htssh://git@github.com/rodriguesalex/nginx-deploy.git
+  ref:
+    branch: master
+  # secretRef:
+  #   name: flux-system
+  include:
+    - repository:
+        name: nginx-image-meta
+      toPath: overlays/apps/nginx-image-meta
