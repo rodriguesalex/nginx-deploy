@@ -5,6 +5,7 @@ resources:
   - ../../base
   - gitrepository-nginx-image-meta.yaml
   - kustomization-nginx-image-meta.yaml
+  - ../apps/nginx-image-meta
 
 patchesStrategicMerge:
   - patch-replicas.yaml
